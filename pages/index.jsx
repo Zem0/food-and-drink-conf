@@ -2,13 +2,13 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 
 import LargeListItem from '@/components/molecules/large-list-item';
-import List from '@/components/atoms/list-holder';
+import ListHolder from '@/components/atoms/list-holder';
 import KeySpeakersList from '@/components/organisms/key-speakers-list';
 
 import { fadeIn, handleScroll } from '@/scripts/animations';
 
 import sessions from '@/data/featured-sessions.json';
-import HeroImage from '@/components/organisms/hero-image/hero';
+import HeroImage from '@/components/organisms/hero-image';
 
 export default function Home() {
     useEffect(() => {
@@ -29,17 +29,19 @@ export default function Home() {
                 <meta name='viewport' content='width=device-width, initial-scale=1'/>
                 <link rel='icon' href='/favicon.ico'/>
             </Head>
-            <main>
+            <header>
                 <section>
                     <h1 class='page-heading'>Welcome to <span class='italic-text light-weight-text'>Food & Drink</span> Conference 2024!</h1>
                     <HeroImage/>
                 </section>
+            </header>
+            <main>
                 <section>
-                    <List heading='Featured Sessions'>
+                    <ListHolder heading='Featured Sessions'>
                         {sessions.map((session) => (
                             <LargeListItem key={session.id} headingText={session.heading} detailText={session.time} imageSrc={session.thumbnail} />
                         ))}
-                    </List>
+                    </ListHolder>
                 </section>
                 <KeySpeakersList />
             </main>

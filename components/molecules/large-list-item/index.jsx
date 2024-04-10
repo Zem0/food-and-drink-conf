@@ -6,15 +6,33 @@ import listItemStyles from './index.module.sass';
 
 import { useMousePosition } from '@/scripts/use-mouse-position';
 
+/**
+ * LargeListItem component renders a list item using an <li> tag, with different versions based on screen width.
+ * It displays a desktop version by default and a mobile version for screens narrower than 768px.
+ *
+ * @param {Object} props - Component props.
+ * @param {string} props.headingText - Heading text to be displayed.
+ * @param {string} props.detailText - Detail text to be displayed.
+ * @param {string} props.additionalClassNames - Additional CSS classes to apply to the list item.
+ * @param {string} props.imageSrc - Source URL for the image.
+ * @returns {JSX.Element} React component.
+ */
 export default function LargeListItem({ headingText, detailText, additionalClassNames, imageSrc }) {
-
     const { x, y } = useMousePosition(); // Get the current cursor position
     const [showImage, setShowImage] = useState(false);
 
+    /**
+     * Handler function to set showImage state to true when mouse enters the list item.
+     * @returns {void}
+     */
     const handleMouseEnter = () => {
         setShowImage(true);
     };
 
+    /**
+     * Handler function to set showImage state to false when mouse leaves the list item.
+     * @returns {void}
+     */
     const handleMouseLeave = () => {
         setShowImage(false);
     };
@@ -68,7 +86,20 @@ export default function LargeListItem({ headingText, detailText, additionalClass
     );
 }
 
-// Desktop component to be shown as default.
+/**
+ * Desktop component to be shown as default.
+ * @param {Object} props - Component props.
+ * @param {string} props.headingText - Heading text to be displayed.
+ * @param {string} props.detailText - Detail text to be displayed.
+ * @param {string} props.additionalClassNames - Additional CSS classes to apply to the list item.
+ * @param {Function} props.handleMouseEnter - Handler function for mouse enter event.
+ * @param {Function} props.handleMouseLeave - Handler function for mouse leave event.
+ * @param {number} props.x - Current x-coordinate of the mouse cursor.
+ * @param {number} props.y - Current y-coordinate of the mouse cursor.
+ * @param {boolean} props.showImage - Flag to indicate whether to show the image.
+ * @param {string} props.imageSrc - Source URL for the image.
+ * @returns {JSX.Element} React component.
+ */
 const DesktopVersion = ({ headingText, detailText, additionalClassNames, handleMouseEnter, handleMouseLeave, x, y, showImage, imageSrc }) => {
     return (
         <li
@@ -96,7 +127,15 @@ const DesktopVersion = ({ headingText, detailText, additionalClassNames, handleM
     );
 }
 
-// component to be displayed at mobile sizes.
+/**
+ * Mobile component to be displayed at mobile sizes.
+ * @param {Object} props - Component props.
+ * @param {string} props.headingText - Heading text to be displayed.
+ * @param {string} props.detailText - Detail text to be displayed.
+ * @param {string} props.additionalClassNames - Additional CSS classes to apply to the list item.
+ * @param {string} props.imageSrc - Source URL for the image.
+ * @returns {JSX.Element} React component.
+ */
 const MobileVersion = ({ headingText, detailText, additionalClassNames, imageSrc }) => {
     return (
         <li className={`${'fade-in mobile-view'} ${listItemStyles['large-list-item']} ${additionalClassNames} ${listItemStyles['mobile-view']}`}>

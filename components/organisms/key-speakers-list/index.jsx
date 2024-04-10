@@ -6,11 +6,22 @@ import speakerListStyles from './index.module.sass';
 import MediumListItem from '@/components/molecules/medium-list-item';
 import SmallSectionHeading from '@/components/atoms/small-section-heading';
 
-import speakers from '@/data/key-speakers.json'
+import speakers from '@/data/key-speakers.json';
 
+/**
+ * KeySpeakersList component displays a list of key speakers with their images and session details.
+ * It allows hovering over each speaker to display their image and session details.
+ *
+ * @returns {JSX.Element} React component.
+ */
 const KeySpeakersList = () => {
     const [selectedSpeaker, setSelectedSpeaker] = useState(null);
 
+    /**
+     * Handler function to set the selected speaker when hovering over a speaker item.
+     * @param {Object} speaker - The speaker object.
+     * @returns {void}
+     */
     const handleSpeakerHover = (speaker) => {
         setSelectedSpeaker(speaker);
     };

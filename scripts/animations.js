@@ -1,4 +1,8 @@
-// Function to apply fade-in effect to elements; this works alongside some style rules which can be found in styles/globals.sass.
+/**
+ * Applies a fade-in effect to elements with the 'fade-in' class.
+ * This function works alongside style rules defined in styles/globals.sass.
+ * @param {Window} window - The global window object.
+ */
 const fadeIn = (window) => {
     // Select all elements with the class 'fade-in'
     const elementsArray = window.document.querySelectorAll('.fade-in');
@@ -15,7 +19,9 @@ const fadeIn = (window) => {
     }
 };
 
+// Function to handle scroll events and trigger the fadeIn function
 const handleScroll = (window) => {
+    // Call the fadeIn function with the current window object
     fadeIn(window);
 };
 

@@ -3,13 +3,20 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 
+/**
+ * HeroImage component displays a hero image that scales and pins to the top right corner
+ * while scrolling down the page.
+ *
+ * @returns {JSX.Element} HeroImage component.
+ */
 const HeroImage = () => {
-    const heroImageRef = useRef(null);
+    const heroImageRef = useRef(null); // Ref for the hero image element
     const parentRef = useRef(null); // Ref for the parent element to be used as the scroll trigger
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
+        // Animation using GSAP and ScrollTrigger
         gsap.from(heroImageRef.current, {
             scaleX: 0.3,
             scaleY: 0.3,
@@ -29,6 +36,7 @@ const HeroImage = () => {
     return (
         <div className='hero-image-container span-whole-grid' ref={parentRef}>
             <Image
+                priority
                 ref={heroImageRef}
                 src='/images/header-image.png'
                 alt='Hero Image'
