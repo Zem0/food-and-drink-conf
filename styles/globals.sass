@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10,100..900&display=swap')
+
+*
+    box-sizing: border-box
+
+html,
+body
+    padding: 0
+    margin: 0
+
+.cursor-image
+    position: absolute
+    z-index: 10000000
+    transform: translate(-50%, -50%)
+
+li
+    list-style-type: none
+    color: #000
+    &:hover
+        color: #1062FF
+        transition: color .1s
+
+.page-heading
+    grid-column-start: 1
+    grid-column-end: 12
+
+section
+    margin-block-end: 9.2rem
+    margin-inline: auto
+    padding-inline: 8rem
+    max-width: 144rem
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-column-gap: 3.2rem
+
+ul
+    padding: 0
+    margin: 0
+    > *
+        cursor: default
+
+/*  ———————————————————————————————————————————————————————————————————————————
+    GRID
+    ——————————————————————————————————————————————————————————————————————————— */
+
+.span-whole-grid
+    grid-column-start: 1
+    grid-column-end: 13
+
+.span-6-13
+    grid-column-start: 6
+    grid-column-end: 13
+
+/*  ———————————————————————————————————————————————————————————————————————————
+    TYPOGRAPHY
+    ——————————————————————————————————————————————————————————————————————————— */
+
+html
+    font-size: 62.5%
+    font-family: 'Inter', Arial, Helvetica, sans-serif
+    font-variation-settings: 'slnt' 0
+
+body
+    font-size: 2.4rem
+
+// so now in most browsers:
+// 0.8rem = 8px
+// 1rem = 10px
+// 1.2rem = 12px
+// 2.2rem = 22px
+// etc
+
+h1
+    font-size: 8.8rem
+    font-weight: 500
+    line-height: 9.6rem
+    letter-spacing: -.4rem
+
+
+.italic-text
+    font-variation-settings: 'slnt' -10
+
+.light-weight-text
+    font-weight: 300
+
+.list-heading
+    font-size: 2.4rem
+    font-weight: normal
+    letter-spacing: -.05rem
+    color: rgba(0,0,0,.6)
+
+.fade-in
+    -webkit-transform: translateY(30px)
+    transform: translateY(30px)
+    -webkit-transition: opacity .7s, transform .7s
+    -o-transition: opacity .7s, transform .7s
+    transition: opacity .7s, transform .7s
+    opacity: 0
+
+.fade-in.inView
+    opacity: 1
+    -webkit-transform: translateY(0px)
+    transform: translateY(0px)
+    -webkit-transition-delay: .3s
+    -o-transition-delay: .3s
+    transition-delay: .3s
+
+.inView
+    opacity: 1
+    -webkit-transform: translateY(0px)
+    transform: translateY(0px)
+
+/*  ———————————————————————————————————————————————————————————————————————————
+    CUSTOM CURSORS
+    ——————————————————————————————————————————————————————————————————————————— */
+
+.agriculture-thumb
+    cursor: url('../public/images/agriculture-thumb.png'), auto
