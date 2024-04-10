@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "heading": "The Future of Sustainable Agriculture",
+        "time": "9am - 10.30am",
+        "thumbnail": "/images/agriculture-thumb.png"
+    },
+    {
+        "id": 2,
+        "heading": "Mixology Masterclass",
+        "time": "11am - 12.30am",
+        "thumbnail": "/images/mixology-thumb.png"
+    },
+    {
+        "id": 3,
+        "heading": "From Farm to Fork",
+        "time": "2pm - 3pm",
+        "thumbnail": "/images/fork-thumb.png"
+    },
+    {
+        "id": 4,
+        "heading": "Tasting Workshop",
+        "time": "3pm - 4.30pm",
+        "thumbnail": "/images/tasting-thumb.png"
+    }
+]

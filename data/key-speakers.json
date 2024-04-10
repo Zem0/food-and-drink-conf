@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "speaker": "Dr. Emily Johnson",
+        "session": "The Future of Sustainable Agriculture",
+        "imgSrc": "/images/agriculture.png",
+        "altText": "A woman crouches near to the ground, spreading soil around a newly planted sapling."
+    },
+    {
+        "id": 2,
+        "speaker": "Michael Smith",
+        "session": "Mixology Masterclass",
+        "imgSrc": "/images/mixology.png",
+        "altText": "A cocktail sits on a wooden table top in a short, whiskey type glass."
+    },
+    {
+        "id": 3,
+        "speaker": "Sarah Lee",
+        "session": "From Farm to Fork",
+        "imgSrc": "/images/fork.png",
+        "altText": "Two tractors can be seen ploughing a field."
+    },
+    {
+        "id": 4,
+        "speaker": "Chef Maria Rodriguez",
+        "session": "Tasting Workshop",
+        "imgSrc": "/images/tasting.png",
+        "altText": "A desert bowl with a white, creamy pudding being moved with a spoon."
+    }
+]

@@ -1,0 +1,48 @@
+.speaker-list-holder
+    gap: 6.4rem
+    display: flex
+    flex-direction: row
+
+.speaker-list-image-holder
+    margin: 0
+    margin-block: 3.6rem
+    position: relative
+    grid-column-start: 1
+    grid-column-end: 5
+    background-size: cover
+    background-position: center
+    flex-grow: 1
+    height: 51.5rem
+    max-width: 51.5rem
+    border-radius: 1rem
+    overflow: hidden
+    transition: background-image .2s
+    img
+        position: relative
+        // bottom: 5rem
+        width: auto
+        height: auto
+    figcaption
+        background: #1062FF
+        margin: 0
+        width: 100%
+        height: fit-content
+        padding: 2.4rem
+        h4
+            margin: 0 0 1rem 0
+            font-weight: normal
+            font-size: 2rem
+            color: rgba(255,255,255,.7)
+        p
+            font-size: 3.2rem
+            color: #fff
+            margin: 0
+
+    .speaker-name
+        position: absolute
+        bottom: 0
+
+.speaker-list
+    grid-column-start: 6
+    grid-column-end: 13
+    flex-grow: 1
